@@ -2,3 +2,4 @@
 ---
 - vim
 - oh-my-zsh
+- tmux
