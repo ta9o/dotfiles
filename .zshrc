@@ -5,10 +5,6 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="cypher"
-# ZSH_THEME="blinks"
-# ZSH_THEME="agnoster"
 ZSH_THEME="custom-agnoster"
 
 # Example aliases
@@ -43,9 +39,11 @@ unsetopt correct_all
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/cyberagent/.pythonbrew/bin:/Applications/adt-bundle-mac-x86_64/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64/sdk/tools:/usr/local/heroku/bin:/Users/cyberagent/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+# export PATH=/Users/cyberagent/.pythonbrew/bin:/usr/local/heroku/bin:/Users/cyberagent/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/bin:/Users/cyberagent/.rbenv/versions/1.9.3-p194/bin
+export PATH=$HOME/.pythonbrew/bin:/usr/local/heroku/bin:$HOME/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/bin:$HOME/.rbenv/versions/1.9.3-p194/bin
 export JAVA_HOME=`/usr/libexec/java_home -v '1.6*'`
 export EDITOR=vim
+export ANDROID_HOME=/Applications/Android\ Studio.app/sdk
 
 # Vim keybind
 # bindkey -v
@@ -69,3 +67,4 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
         screen -rx || screen -D -RR
     fi
 fi
+################### tmux ###################

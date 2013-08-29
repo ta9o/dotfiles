@@ -23,6 +23,8 @@ NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
 NeoBundle 'git://github.com/Shougo/vimfiler.git'
+NeoBundle 'taichouchou2/alpaca_powertabline'
+NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
 " ######################## neobundle #######################
 
 " ######################## neocomplcache #######################
@@ -192,3 +194,15 @@ let g:solarized_visibility='normal'
 syntax enable
 set background=dark
 colorscheme solarized
+" ++++++++ color schema ++++++++
+
+" ++++++++ customized emacs like key bind when it's in insert mode ++++++++
+map <C-a> <Home>
+map <C-e> <End>
+imap <C-a> <Home>
+imap <C-e> <End>
+imap <C-f> <Right>
+imap <C-b> <Left>
+imap <C-p> <Up>
+imap <C-n> <Down>
+" ++++++++ customized emacs like key bind when it's in insert mode ++++++++
