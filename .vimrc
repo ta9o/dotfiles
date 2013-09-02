@@ -157,15 +157,14 @@ set backspace=start,eol,indent
 set laststatus=2
 set statusline=%F%r%h%=
 set expandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
 set smarttab
 set number
 set autoindent
 set encoding=utf-8
 set fileencodings=utf8,iso-2022-jp,euc-jp,sjis
 set nocompatible "vi非互換モード
+set et ts=4 sw=4 sts=4
+autocmd FileType vim,sh,html,xhtml,javascript,coffee,ruby,eruby,scala,lua setlocal et ts=2 sw=2 sts=2
 
 " +++++++++ set paste +++++++++ 
 " 毎回 Insert を抜ける時に set nopaste する
