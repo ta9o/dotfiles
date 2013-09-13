@@ -19,11 +19,22 @@ if neobundle#exists_not_installed_bundles()
 endif
 
 " ######### plugins ########
-NeoBundle 'git://github.com/Shougo/neocomplcache.git'
-NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
-NeoBundle 'git://github.com/Shougo/unite.vim.git'
-NeoBundle 'git://github.com/Shougo/vimfiler.git'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'teramako/jscomplete-vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'szw/vim-tags'
 NeoBundle 'taichouchou2/alpaca_powertabline'
+NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'taichouchou2/surround.vim'
+NeoBundle 'open-browser.vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'tell-k/vim-browsereload-mac'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
 " ######################## neobundle #######################
 
@@ -150,6 +161,24 @@ nnoremap <silent> ,vcb :Unite build:!<CR>
 nnoremap <silent> ,vch :UniteBuildClearHighlight<CR>
 "" }}}
 " ######################## unite.vim #######################
+
+" ######################## vim-javascript-syntax #######################
+" au FileType javascript call JavaScriptFold()
+" ######################## vim-javascript-syntax #######################
+
+" ######################## jscomplete-vim #######################
+autocmd FileType javascript
+  \ :setl omnifunc=jscomplete#CompleteJS
+let g:jscomplete_use = ['dom', 'moz', 'es6th']
+" ######################## jscomplete-vim #######################
+
+" ######################## syntastic #######################
+let g:syntastic_javascript_checker = "jshint"
+" ######################## syntastic #######################
+
+" ######################## vim-tags #######################
+au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
+" ######################## vim-tags #######################
 
 set hlsearch
 set clipboard=unnamed,autoselect
